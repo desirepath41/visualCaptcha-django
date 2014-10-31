@@ -12,7 +12,7 @@ A demo/sample Django app that uses the [visualcaptcha python package](https://gi
 
 You need Python installed with pip.
 ```
-pip install -r dependencies.txt
+pip install -r requirements.txt
 ```
 
 
