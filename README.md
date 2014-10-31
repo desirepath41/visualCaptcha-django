@@ -26,7 +26,7 @@ Note: `--insecure` is needed to load the static files locally.
 
 If you want to run the unit tests, use the following command:
 ```
-python test.py
+python manage.py test
 ```
 
 

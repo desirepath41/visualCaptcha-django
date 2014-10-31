@@ -1,0 +1,20 @@
+language: python
+python:
+  - "2.7"
+branches:
+  only:
+    - master
+# command to install dependencies
+install:
+  - "pip install -r requirements.txt"
+  - "pip install coveralls"
+# command to run tests
+script:
+  coverage run manage.py test
+env:
+  global:
+    - secure: "Fi0WyCNF2xL8evcePzA3A6jRwjByOu98izksUZ64nGhPWNCUIYf8ljH3ZaO7/nTlpUqNw4rGXh51PgqNagTEDKs5LZZZugEogUYS9hIpAt0cXeR6zGrbXpHeb+Qad+l8o3rW3HVeVzRNXRkub9HjKfp6rVA5Ko+hY6K/jnOxJgw="
+    - "REPOSITORY=visualcaptcha-django"
+after_success:
+  - "coveralls"
+  - "curl --data 'deploy={\"repository\":\"'$REPOSITORY'\",\"branch\":\"'$TRAVIS_BRANCH'\"}' http://githooks.emotionloop.com/?k=$AUTH_KEY"

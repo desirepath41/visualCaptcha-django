@@ -29,7 +29,10 @@ def getImage(request, index):
     headers = {}
     result = visualCaptcha.streamImage( headers, index, request.GET.get('retina') )
 
-    return HttpResponse(result, headers);
+    if ( result == False ):
+        return HttpResponse( result, headers, 404 )
+
+    return HttpResponse( result, headers )
 
 def getAudio(request, audioType = 'mp3'):
     visualCaptcha = Captcha( Session(request.session) )
@@ -37,7 +40,10 @@ def getAudio(request, audioType = 'mp3'):
     headers = {}
     result = visualCaptcha.streamAudio( headers, audioType )
 
-    return HttpResponse(result, headers);
+    if ( result == False ):
+        return HttpResponse( result, headers, 404 )
+
+    return HttpResponse( result, headers )
 
 @csrf_exempt
 def trySubmission(request):
