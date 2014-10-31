@@ -10,7 +10,7 @@ install:
   - "pip install coveralls"
 # command to run tests
 script:
-  coverage run manage.py test
+  coverage run --source=django-project manage.py test
 env:
   global:
     - secure: "Fi0WyCNF2xL8evcePzA3A6jRwjByOu98izksUZ64nGhPWNCUIYf8ljH3ZaO7/nTlpUqNw4rGXh51PgqNagTEDKs5LZZZugEogUYS9hIpAt0cXeR6zGrbXpHeb+Qad+l8o3rW3HVeVzRNXRkub9HjKfp6rVA5Ko+hY6K/jnOxJgw="
