@@ -1,5 +1,7 @@
-visualCaptcha-django [![Build Status](https://travis-ci.org/emotionLoop/visualCaptcha-django.png?branch=master)](https://travis-ci.org/emotionLoop/visualCaptcha-django)
-==================
+# visualCaptcha-django
+
+[![Build Status](http://img.shields.io/travis/emotionLoop/visualCaptcha-django.svg)](http://travis-ci.org/emotionLoop/visualCaptcha-django)
+[![Coverage Status](https://coveralls.io/repos/emotionLoop/visualCaptcha-django/badge.png)](https://coveralls.io/r/emotionLoop/visualCaptcha-django)
 
 Django sample for visualCaptcha. [You can also see it live](http://django.demo.visualcaptcha.net).
 
