@@ -13,7 +13,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [ 'localhost' ]
+ALLOWED_HOSTS = [ 'localhost', 'django.demo.visualcaptcha.net' ]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -51,7 +51,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = '/home/personal/visualCaptcha-django/django-project/static'
+STATIC_ROOT = '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/static'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -59,7 +59,7 @@ STATIC_URL = '/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/home/personal/visualCaptcha-django/django-project/public',
+    '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/public',
 )
 
 # List of finder classes that know how to find static files in
@@ -96,7 +96,7 @@ ROOT_URLCONF = 'django-project.urls'
 WSGI_APPLICATION = 'django-project.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/home/personal/visualCaptcha-django/django-project/public',
+    '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/public',
 )
 
 INSTALLED_APPS = (
