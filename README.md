@@ -1,5 +1,7 @@
 [![Build Status](http://img.shields.io/travis/emotionLoop/visualCaptcha-django.svg)](http://travis-ci.org/emotionLoop/visualCaptcha-django)
-[![Coverage Status](https://coveralls.io/repos/emotionLoop/visualCaptcha-django/badge.png)](https://coveralls.io/r/emotionLoop/visualCaptcha-django)
+[![Coverage Status](https://coveralls.io/repos/emotionLoop/visualCaptcha-django/badge.svg)](https://coveralls.io/r/emotionLoop/visualCaptcha-django)
+[![Codacy](https://www.codacy.com/project/badge/de63c55be5024f58804ede55c7f2b0e8)](https://www.codacy.com/app/bruno-bernardino/visualCaptcha-django)
+[![Code Climate](https://codeclimate.com/github/emotionLoop/visualCaptcha-django/badges/gpa.svg)](https://codeclimate.com/github/emotionLoop/visualCaptcha-django)
 
 # visualCaptcha-django
 
