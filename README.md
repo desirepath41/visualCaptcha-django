@@ -73,4 +73,4 @@ This is just a sample route, where we post the form to, and where the visualCapt
 
 ## License
 
-MIT. Check the LICENSE file.
+MIT. Check the [LICENSE](LICENSE) file.
