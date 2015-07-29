@@ -22,9 +22,8 @@ pip install -r requirements.txt
 
 To start the server on port, for example, 8282, run the following command:
 ```
-python manage.py runserver 0.0.0.0:8282 --insecure
+python manage.py runserver 0.0.0.0:8282
 ```
-Note: `--insecure` is needed to load the static files locally.
 
 ## Run tests
 
