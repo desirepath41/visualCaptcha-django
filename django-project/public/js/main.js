@@ -1,6 +1,6 @@
 ( function( window, visualCaptcha ) {
     var captcha = visualCaptcha( 'sample-captcha', {
-        imgPath: 'img/',
+        imgPath: 'static/img/',
         captcha: {
             numberOfImages: 5,
             callbacks: {

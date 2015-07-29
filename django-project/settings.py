@@ -1,6 +1,10 @@
 # Django settings for django-project project.
 
-DEBUG = False
+import os
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -55,11 +59,11 @@ STATIC_ROOT = '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/stat
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/'
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/public',
+    os.path.join(PROJECT_PATH, 'public'),
 )
 
 # List of finder classes that know how to find static files in
@@ -73,12 +77,21 @@ STATICFILES_FINDERS = (
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'a6_js9wywxk&1**nga(nl7sc#s$&_=dpeos4ccju^sbm34e=#b'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(PROJECT_PATH, 'public')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -94,10 +107,6 @@ ROOT_URLCONF = 'django-project.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'django-project.wsgi.application'
-
-TEMPLATE_DIRS = (
-    '/srv/www/django.demo.visualcaptcha.net/htdocs/django-project/public',
-)
 
 INSTALLED_APPS = (
     #'django.contrib.auth',
